@@ -57,7 +57,7 @@ class LaporanController extends Controller
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(0, 7, 'Jumlah Total Kendaraan: ' . $kendaraans->count(), 0, 1, 'L');
         $pdf->SetFont('Arial', 'I', 9);
-        $pdf->Cell(0, 6, 'Tanggal Cetak: ' . date('d/m/Y H:i:s'), 0, 1, 'L');
+        $pdf->Cell(0, 6, 'Tanggal Cetak: ' . \Carbon\Carbon::now('Asia/Jakarta')->format('d/m/Y H:i:s') . ' WIB', 0, 1, 'L');
 
         return response($pdf->Output('S'), 200, [
             'Content-Type' => 'application/pdf',
@@ -116,7 +116,7 @@ class LaporanController extends Controller
         $pdf->SetFont('Arial', 'B', 10);
         $pdf->Cell(0, 7, 'Jumlah Total Antrian: ' . $antrians->count(), 0, 1, 'L');
         $pdf->SetFont('Arial', 'I', 9);
-        $pdf->Cell(0, 6, 'Tanggal Cetak: ' . date('d/m/Y H:i:s'), 0, 1, 'L');
+        $pdf->Cell(0, 6, 'Tanggal Cetak: ' . \Carbon\Carbon::now('Asia/Jakarta')->format('d/m/Y H:i:s') . ' WIB', 0, 1, 'L');
 
         return response($pdf->Output('S'), 200, [
             'Content-Type' => 'application/pdf',

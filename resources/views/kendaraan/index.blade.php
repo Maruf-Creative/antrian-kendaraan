@@ -8,9 +8,14 @@
         <h3 class="fw-bold mb-1" style="color: #0f172a; letter-spacing: -0.02em;">Data Kendaraan</h3>
         <p class="text-muted mb-0 small">Kelola seluruh armada kendaraan yang terhubung dengan akun Anda.</p>
     </div>
-    <a href="{{ route('kendaraan.create') }}" class="btn btn-primary">
-        <i class="fas fa-plus"></i> Tambah Kendaraan
-    </a>
+    <div class="d-flex gap-2">
+        <a href="{{ route('laporan.kendaraan.pdf') }}" target="_blank" class="btn btn-outline-danger">
+            <i class="fas fa-file-pdf me-1"></i> Cetak PDF
+        </a>
+        <a href="{{ route('kendaraan.create') }}" class="btn btn-primary">
+            <i class="fas fa-plus me-1"></i> Tambah Kendaraan
+        </a>
+    </div>
 </div>
 
 <div class="card mb-4">

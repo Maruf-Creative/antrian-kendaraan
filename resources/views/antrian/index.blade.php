@@ -8,9 +8,14 @@
         <h3 class="fw-bold mb-1" style="color: #0f172a; letter-spacing: -0.02em;">Data Antrian Kendaraan</h3>
         <p class="text-muted mb-0 small">Pantau status nomor antrian, jadwal pelayanan, dan data kendaraan.</p>
     </div>
-    <a href="{{ route('antrian.create') }}" class="btn btn-primary">
-        <i class="fas fa-plus"></i> Tambah Antrian Baru
-    </a>
+    <div class="d-flex gap-2">
+        <a href="{{ route('laporan.antrian.pdf') }}" target="_blank" class="btn btn-outline-danger">
+            <i class="fas fa-file-pdf me-1"></i> Cetak PDF
+        </a>
+        <a href="{{ route('antrian.create') }}" class="btn btn-primary">
+            <i class="fas fa-plus me-1"></i> Tambah Antrian Baru
+        </a>
+    </div>
 </div>
 
 <!-- Quick Status Filter Pills -->
